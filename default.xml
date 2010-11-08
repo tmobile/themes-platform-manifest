@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote  name="themes"
+           fetch="ssh://devpde01.unix.gsm1900.org/msdf/data/pluto/themes-aosp" />
   <remote  name="korg"
            fetch="git://android.git.kernel.org/"
            review="review.source.android.com" />
@@ -106,10 +108,10 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
 
-  <project path="frameworks/base" name="platform/frameworks/base" />
+  <project path="frameworks/base" name="platform/frameworks/base" remote="themes" revision="refs/heads/themes-2.2_r1" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
-  <project path="frameworks/policies/base" name="platform/frameworks/policies/base" />
+  <project path="frameworks/policies/base" name="platform/frameworks/policies/base" remote="themes" revision="refs/heads/themes-2.2_r1" />
 
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
@@ -167,6 +169,10 @@
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
   <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
   <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
+
+  <project path="vendor/tmobile/apps/ThemeChooser" name="platform/vendor/tmobile/apps/ThemeChooser" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/libs/com.tmobile.themes" name="platform/vendor/tmobile/libs/com.tmobile.themes" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/providers/ThemeManager" name="platform/vendor/tmobile/providers/" remote="themes" revision="refs/heads/master" />
 
   <project path="prebuilt" name="platform/prebuilt" />
   <project path="sdk" name="platform/sdk" />
