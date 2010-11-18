@@ -2,6 +2,8 @@
 <manifest>
   <remote  name="themes"
            fetch="ssh://msdf@devpde01.unix.gsm1900.org/msdf/data/pluto/themes-aosp" />
+  <remote  name="common"
+           fetch="ssh://msdf@devpde01.unix.gsm1900.org/msdf/data/pluto/common" />
   <remote  name="korg"
            fetch="git://android.git.kernel.org/"
            review="review.source.android.com" />
@@ -10,6 +12,11 @@
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="vendor/tmobile/build/common" remote="common" revision="refs/heads/master" name="platform/vendor/tmobile/build/common">
+    <copyfile src="Android.mk" dest="vendor/tmobile/Android.mk" />
+    <copyfile src="vendorsetup.sh" dest="vendor/tmobile/vendorsetup.sh" />
   </project>
 
   <project path="bionic" name="platform/bionic" />
@@ -174,6 +181,8 @@
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="platform/vendor/tmobile/libs/com.tmobile.themes" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/providers/ThemeManager" name="platform/vendor/tmobile/providers/ThemeManager" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/themes/Androidian" name="platform/vendor/tmobile/themes/Androidian" remote="themes" revision="refs/heads/master" />
+
+  <project path="vendor/tmobile/products/themes" name="platform/vendor/tmobile/products/themes" remote="themes" revision="refs/heads/master" />
 
   <project path="prebuilt" name="platform/prebuilt" />
   <project path="sdk" name="platform/sdk" />
