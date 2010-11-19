@@ -179,6 +179,7 @@
 
   <project path="vendor/tmobile/apps/ThemeChooser" name="platform/vendor/tmobile/apps/ThemeChooser" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="platform/vendor/tmobile/libs/com.tmobile.themes" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/libs/com.tmobile.themehelper" name="platform/vendor/tmobile/libs/com.tmobile.themehelper" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/providers/ThemeManager" name="platform/vendor/tmobile/providers/ThemeManager" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/themes/Androidian" name="platform/vendor/tmobile/themes/Androidian" remote="themes" revision="refs/heads/master" />
 
