@@ -5,7 +5,7 @@
   <remote  name="common"
            fetch="git://github.com/tmobile" />
   <remote  name="korg"
-           fetch="git://android.git.kernel.org/"
+           fetch="https://android.googlesource.com//"
            review="review.source.android.com" />
   <default revision="refs/tags/android-2.3.1_r1"
            remote="korg" />
